@@ -2,6 +2,21 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  @apply bg-stone-900 text-stone-50;
+@layer base {
+  body {
+    @apply bg-stone-900 text-stone-50;
+    font-family: 'Inter';
+  }
+}
+
+@layer utilities {
+  .center {
+    @apply flex items-center justify-center;
+  }
+}
+
+@layer components {
+  .banner-title {
+    -webkit-text-stroke: 2px #000000;
+  }
 }
