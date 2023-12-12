@@ -14,7 +14,7 @@ const Hero = ({ image, title, subTitle }: Props) => {
   return (
     <section className="w-full h-[40vh] md:h-[80vh] relative">
       <div className="absolute h-full z-10">
-        <div className=" flex flex-col px-16 gap-y-4 justify-center h-full">
+        <div className="flex flex-col px-16 gap-y-4 justify-center h-full">
           <div className="space-y-1">
             <h2
               className={clsx(

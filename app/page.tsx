@@ -7,7 +7,9 @@ const Home = () => {
     <main className="h-full">
       <Hero image="/banner.jpg" title="Aladdin" subTitle="Naam to suna hoga!" />
 
-      <VideoCarousel title="JavaScript Programming" videos={data} />
+      <div className="py-8">
+        <VideoCarousel title="JavaScript Programming" videos={data} />
+      </div>
     </main>
   );
 };
