@@ -1,8 +1,4 @@
-const Logo = () => (
-  <h1 className="text-red-500 uppercase tracking-tight font-bold text-3xl select-none">
-    YouFlix
-  </h1>
-);
+import Logo from './Logo';
 
 const Navbar = () => {
   return (
