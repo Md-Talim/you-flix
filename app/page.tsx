@@ -1,4 +1,5 @@
-import ThumbnailCard from '@/components/ThumbnailCard';
+import VideoCarousel from '@/components/VideoCarousel';
+import data from '@/data';
 import Hero from './Hero';
 
 const Home = () => {
@@ -6,9 +7,7 @@ const Home = () => {
     <main className="h-full">
       <Hero image="/banner.jpg" title="Aladdin" subTitle="Naam to suna hoga!" />
 
-      <ThumbnailCard size="small" imageUrl="/banner.jpg" />
-      <ThumbnailCard size="medium" imageUrl="/banner.jpg" />
-      <ThumbnailCard size="large" imageUrl="/banner.jpg" />
+      <VideoCarousel title="JavaScript Programming" videos={data} />
     </main>
   );
 };
