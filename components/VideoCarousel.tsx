@@ -4,36 +4,9 @@ interface Props {
   title: string;
   size?: 'small' | 'medium' | 'large';
   videos: {
-    id: {
-      kind: string;
-      videoId?: string;
-      playlistId?: string;
-    };
-    snippet: {
-      publishedAt: string;
-      channelId: string;
-      title: string;
-      description: string;
-      thumbnails: {
-        default: {
-          url: string;
-          width?: number;
-          height?: number;
-        };
-        medium: {
-          url: string;
-          width?: number;
-          height?: number;
-        };
-        high: {
-          url: string;
-          width?: number;
-          height?: number;
-        };
-      };
-      channelTitle: string;
-      publishTime: string;
-    };
+    title: string;
+    channelId: string;
+    imageUrl: string;
   }[];
 }
 
@@ -44,8 +17,8 @@ const VideoCarousel = ({ title, size = 'small', videos }: Props) => {
       <div className="hide-scrollbar flex gap-x-2 max-w-full overflow-x-scroll">
         {videos.map((video) => (
           <ThumbnailCard
-            key={`${video.snippet.channelId} - ${video.snippet.title}`}
-            imageUrl={video.snippet.thumbnails.high.url}
+            key={`${video.channelId} - ${video.title}`}
+            imageUrl={video.imageUrl}
             size={size}
           />
         ))}
