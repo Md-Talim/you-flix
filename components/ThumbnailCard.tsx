@@ -14,7 +14,7 @@ const ThumbnailCard = ({ size, imageUrl }: Props) => {
   };
 
   return (
-    <article className="">
+    <div className="my-4">
       <div className={clsx('relative', styles[size])}>
         <Image
           src={imageUrl}
@@ -23,7 +23,7 @@ const ThumbnailCard = ({ size, imageUrl }: Props) => {
           className="rounded-md object-cover object-center inset-0"
         />
       </div>
-    </article>
+    </div>
   );
 };
 
