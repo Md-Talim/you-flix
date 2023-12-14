@@ -10,9 +10,9 @@ interface Video {
 const getVideos = async (query: string) => {
   const apiKey = process.env.API_KEY;
 
-  const res = await fetch(
-    `https://youtube.googleapis.com/youtube/v3/search?part=snippet&maxResults=25&key=${apiKey}&q=${query}`,
-  );
+  const baseUrl = 'https://youtube.googleapis.com/youtube/v3';
+
+  const res = await fetch(`${baseUrl}/${query}&key=${apiKey}&maxResults=25`);
 
   const videos = await res.json();
 

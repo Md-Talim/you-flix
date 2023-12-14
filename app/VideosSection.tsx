@@ -1,8 +1,8 @@
 import VideoCarousel from '@/components/VideoCarousel';
-import getVideos from '@/hooks/getVideos';
+import getSearchedVideos from '@/hooks/getSearchedVideos';
 
 const ProgrammingSection = async () => {
-  const programmingVideos = await getVideos('Programming');
+  const programmingVideos = await getSearchedVideos('Programming');
 
   return (
     <div>
@@ -16,7 +16,7 @@ const ProgrammingSection = async () => {
 };
 
 const DSASection = async () => {
-  const dsaVideos = await getVideos('Data Structures & Algorithms');
+  const dsaVideos = await getSearchedVideos('Data Structures & Algorithms');
 
   return (
     <div>
