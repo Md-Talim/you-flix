@@ -1,4 +1,4 @@
-import Logo from './Logo';
+import Logo from '@/components/Logo';
 
 const Footer = () => (
   <footer className="border-t text-zinc-400 border-zinc-800 mt-10 py-8 space-y-6 px-16">
