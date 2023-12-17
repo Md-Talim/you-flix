@@ -1,6 +1,6 @@
 # YouFlix
 
-This project is a Netflix cloen (but with a twist). You can watch YouTube videos in a Netflix like layout.
+This project is a Netflix clone (but with a twist). You can watch YouTube videos in a Netflix like layout.
 
 ## Getting Started
 
