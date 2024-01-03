@@ -1,5 +1,5 @@
 interface Video {
-  id: { kind: string };
+  id: { kind: string; videoId: string };
   snippet: {
     title: string;
     channelId: string;
@@ -10,19 +10,24 @@ interface Video {
 const getVideos = async (query: string) => {
   const apiKey = process.env.API_KEY;
 
-  const baseUrl = 'https://youtube.googleapis.com/youtube/v3';
+  const baseUrl = "https://youtube.googleapis.com/youtube/v3";
 
-  const res = await fetch(`${baseUrl}/${query}&key=${apiKey}&maxResults=25`);
+  try {
+    const res = await fetch(`${baseUrl}/${query}&key=${apiKey}&maxResults=25`);
 
-  const videos = await res.json();
+    const videos = await res.json();
 
-  return videos.items.map((video: Video) => {
-    return {
-      title: video.snippet.title,
-      channelId: video.snippet.channelId,
-      imageUrl: video.snippet.thumbnails.high.url,
-    };
-  });
+    return videos.items.map((video: Video) => {
+      return {
+        videoId: video.id.videoId,
+        title: video.snippet.title,
+        channelId: video.snippet.channelId,
+        imageUrl: video.snippet.thumbnails.high.url,
+      };
+    });
+  } catch (error) {
+    console.error(error);
+  }
 };
 
 export default getVideos;
