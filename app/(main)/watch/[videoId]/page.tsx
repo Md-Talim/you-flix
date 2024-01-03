@@ -21,8 +21,8 @@ const VideoPage = async ({ params }: { params: { videoId: string } }) => {
         />
 
         <div className="mt-10 space-y-5">
-          <h2 className="text-3xl text-stone-200">{videoDetails.title}</h2>
-          <p className="text-base text-stone-400 max-w-[65ch] whitespace-pre-wrap">
+          <h2 className="text-3xl text-slate-200">{videoDetails.title}</h2>
+          <p className="text-base text-slate-400 max-w-[65ch] whitespace-pre-wrap">
             {videoDetails.description}
           </p>
         </div>

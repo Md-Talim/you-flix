@@ -4,8 +4,8 @@
 
 @layer base {
   body {
-    @apply bg-stone-900 text-stone-50;
-    font-family: 'Inter';
+    @apply bg-slate-950 text-slate-50;
+    font-family: "Inter";
   }
 }
 

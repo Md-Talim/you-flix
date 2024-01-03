@@ -17,7 +17,7 @@ const Hero = ({ image, title, subTitle }: Props) => {
             </h2>
             <p className="md:text-lg">{subTitle}</p>
           </div>
-          <div className="center py-2 gap-x-1 rounded-lg bg-red-500 text-stone-200">
+          <div className="center py-2 gap-x-1 rounded-lg bg-red-500 text-slate-200">
             <PlayIcon className="h-6 w-6" /> Play
           </div>
         </div>
@@ -37,5 +37,3 @@ const Hero = ({ image, title, subTitle }: Props) => {
 };
 
 export default Hero;
-
-// linear-gradient(to top right, rgba(228, 221, 221, 0.2) 10%, rgba(0, 0, 0, 0.3) 95%,
