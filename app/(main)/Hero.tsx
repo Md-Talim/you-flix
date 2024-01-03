@@ -1,6 +1,4 @@
-import { PlayIcon } from '@heroicons/react/20/solid';
-import clsx from 'clsx';
-import { Roboto_Slab } from 'next/font/google';
+import { PlayIcon } from "@heroicons/react/20/solid";
 
 interface Props {
   image: string;
@@ -8,20 +6,13 @@ interface Props {
   subTitle: string;
 }
 
-const robotoSlab = Roboto_Slab({ subsets: ['latin'] });
-
 const Hero = ({ image, title, subTitle }: Props) => {
   return (
     <section className="w-full h-[40vh] md:h-[80vh] relative">
       <div className="absolute h-full z-10">
-        <div className="flex flex-col px-16 gap-y-4 justify-center h-full">
+        <div className="flex flex-col px-4 lg:px-16 gap-y-4 justify-center h-full">
           <div className="space-y-1">
-            <h2
-              className={clsx(
-                robotoSlab.className,
-                'banner-title text-3xl md:text-4xl lg:text-6xl font-bold stroke-black',
-              )}
-            >
+            <h2 className="banner-title text-3xl md:text-4xl lg:text-6xl font-bold">
               {title}
             </h2>
             <p className="md:text-lg">{subTitle}</p>
@@ -34,11 +25,11 @@ const Hero = ({ image, title, subTitle }: Props) => {
       <div
         style={{
           backgroundImage: `url(${image})`,
-          backgroundPosition: '50% 50%',
-          backgroundSize: 'cover',
-          position: 'absolute',
-          width: '100%',
-          height: '100%',
+          backgroundPosition: "50% 50%",
+          backgroundSize: "cover",
+          position: "absolute",
+          width: "100%",
+          height: "100%",
         }}
       />
     </section>

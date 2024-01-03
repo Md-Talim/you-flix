@@ -1,12 +1,12 @@
-import Logo from '@/components/Logo';
+import Logo from "@/components/Logo";
 
 const Footer = () => (
-  <footer className="border-t text-zinc-400 border-zinc-800 mt-10 py-8 space-y-6 px-16">
-    <div className="">
+  <footer className="border-t text-zinc-400 border-zinc-800 mt-10 py-8 space-y-6 px-4 lg:px-16">
+    <div>
       <Logo />
     </div>
 
-    <div className="flex items-center justify-between">
+    <div className="flex flex-col md:flex-row gap-4 md:items-center justify-between">
       <p>
         Built by <a href="https://linkedin.com/in/Md-Talim">Md. Talim</a>
       </p>
