@@ -3,11 +3,10 @@ import useDetails from "@/hooks/useDetails";
 interface VideoDetails {
   title: string;
   description: string;
-  publishedAt: string;
 }
 
 const VideoPage = async ({ params }: { params: { videoId: string } }) => {
-  const videoDetails: VideoDetails = await useDetails(params.videoId);
+  const videoDetails = await useDetails(params.videoId);
 
   return (
     <main className="h-full">

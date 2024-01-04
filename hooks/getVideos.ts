@@ -1,14 +1,3 @@
-interface Video {
-  id: { kind: string; videoId: string };
-  snippet: {
-    title: string;
-    description: string;
-    publishedAt: string;
-    channelId: string;
-    thumbnails: { high: { url: string } };
-  };
-}
-
 const getVideos = async (query: string) => {
   const apiKey = process.env.API_KEY;
 
@@ -19,15 +8,7 @@ const getVideos = async (query: string) => {
 
     const videos = await res.json();
 
-    return videos.items.map((video: Video) => {
-      return {
-        videoId: video.id.videoId,
-        title: video.snippet.title,
-        description: video.snippet.description,
-        channelId: video.snippet.channelId,
-        imageUrl: video.snippet.thumbnails.high.url,
-      };
-    });
+    return videos;
   } catch (error) {
     console.error(error);
   }

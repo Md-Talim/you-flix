@@ -4,8 +4,6 @@ interface Props {
   title: string;
   size?: "small" | "medium" | "large";
   videos: {
-    title: string;
-    channelId: string;
     imageUrl: string;
     videoId: string;
   }[];
@@ -18,8 +16,8 @@ const VideoCarousel = ({ title, size = "small", videos }: Props) => {
       <div className="hide-scrollbar flex gap-x-2 max-w-full overflow-x-scroll">
         {videos?.map((video) => (
           <ThumbnailCard
-            key={`${video.channelId} - ${video.title}`}
             imageUrl={video.imageUrl}
+            key={video.videoId}
             size={size}
             videoId={video.videoId}
           />
