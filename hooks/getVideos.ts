@@ -15,7 +15,7 @@ const getVideos = async (query: string) => {
   const baseUrl = "https://youtube.googleapis.com/youtube/v3";
 
   try {
-    const res = await fetch(`${baseUrl}/${query}&key=${apiKey}`);
+    const res = await fetch(`${baseUrl}/${query}&key=${apiKey}&maxResults=25`);
 
     const videos = await res.json();
 
