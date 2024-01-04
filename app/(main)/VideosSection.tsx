@@ -1,9 +1,9 @@
 import VideoCarousel from "@/components/VideoCarousel";
-import getPopularVideos from "@/hooks/getPopularVideos";
-import getSearchedVideos from "@/hooks/getSearchedVideos";
+import usePopular from "@/hooks/usePopular";
+import useSearch from "@/hooks/useSearch";
 
 const ProgrammingSection = async () => {
-  const programmingVideos = await getSearchedVideos("Programming");
+  const programmingVideos = await useSearch("Programming");
 
   return (
     <div>
@@ -17,7 +17,7 @@ const ProgrammingSection = async () => {
 };
 
 const DSASection = async () => {
-  const dsaVideos = await getSearchedVideos("Data Structures & Algorithms");
+  const dsaVideos = await useSearch("Data Structures & Algorithms");
 
   return (
     <div>
@@ -31,7 +31,7 @@ const DSASection = async () => {
 };
 
 const PopularVideosSection = async () => {
-  const popularVideos = await getPopularVideos();
+  const popularVideos = await usePopular();
 
   return (
     <div>

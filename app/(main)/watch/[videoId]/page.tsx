@@ -1,4 +1,4 @@
-import getVideoDetails from "@/hooks/getVideoDetails";
+import useDetails from "@/hooks/useDetails";
 
 interface VideoDetails {
   title: string;
@@ -7,7 +7,7 @@ interface VideoDetails {
 }
 
 const VideoPage = async ({ params }: { params: { videoId: string } }) => {
-  const videoDetails: VideoDetails = await getVideoDetails(params.videoId);
+  const videoDetails: VideoDetails = await useDetails(params.videoId);
 
   return (
     <main className="h-full">
