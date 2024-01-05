@@ -24,7 +24,7 @@ const DSASection = async () => {
       <VideoCarousel
         title="Learn Data Structures & Algorithms"
         videos={dsaVideos}
-        size="medium"
+        size="large"
       />
     </div>
   );
