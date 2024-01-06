@@ -13,10 +13,8 @@ const VideoPage = async ({ params }: { params: { videoId: string } }) => {
       <section className="px-4 lg:px-16">
         <iframe
           id="ytplayer"
-          width="640"
-          height="360"
           src={`https://www.youtube.com/embed/${params.videoId}?autoplay=1`}
-          className="max-w-full aspect-video"
+          className="w-[768px] max-w-full aspect-video"
         />
 
         <div className="mt-10 space-y-5">
